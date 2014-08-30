@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>my attempt</title>
+        <script type="text/javascript" src="d3/d3.js"></script>
+    </head>
+    <style>
+        div.bar {
+            display: inline-block;
+            width: 20px;
+            height: 75px;  
+            background-color: teal;
+            margin-right: 2px;
+        }
+
+        .stillurs {
+            fill: gold;
+            stroke: black;
+            stroke-width: 9px;
+        }
+    </style>
+    <body>
+        <p>
+        <script type="text/javascript">
+            var w = 500;
+            var h = 50;
+            var dataset = [5,10,15,20,25];
+            var svg = d3.select("body").append("svg");
+            var circles = svg.selectAll("circle")
+            .data(dataset)
+            .enter()
+            .append("circle");
+            circles.attr("cx", function(d, i){
+                return (i*50)+25;
+            })
+            .attr("cy", h/2)
+            .attr("r", function(d) {
+                return d;
+            })
+            .attr("fill", "gold")
+            .attr("stroke", "black")
+            .attr("stroke-width", function(d) {
+                return d/2;
+            })
+        </script>
+    </p>
+    </body>
+</html>   
