@@ -15,5 +15,4 @@ data = r.json()
 pprint.pprint(data)
 
 with open('equalpay.json', 'w') as outfile:
-     json.dump(data, outfile, sort_keys = True, indent = 4,
-ensure_ascii=False)
+     json.dump(data, outfile, sort_keys = True, indent = 4, ensure_ascii=False)
